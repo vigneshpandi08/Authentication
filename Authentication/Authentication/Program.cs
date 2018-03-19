@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Authentication
 {
+
     public abstract class User
     {
         public int Id { get; set; }
@@ -15,6 +16,8 @@ namespace Authentication
         public abstract string GetFullName();
         public abstract void Authenticate(string firstname, string lastname);
     }
+
+
     public class AuthenticatedUser : User
     {
         public override string GetFullName()
@@ -34,6 +37,8 @@ namespace Authentication
             }
         }
     }
+
+
     public class Guest : User
     {
         public override string GetFullName()
@@ -53,6 +58,8 @@ namespace Authentication
             }
         }
     }
+
+
     public class Program
     {
         static void Main(string[] args)
